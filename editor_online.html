@@ -10,7 +10,7 @@
 		.page{background:#eee;overflow:hidden;}
 		.page .left{position:relative;float:left;background:#fff;width:200px;transition:width 0.3s;}
 		.page .left.hidden{width:0;}
-		.page .left .toggleSide{position:absolute;height:5em;line-height:5em;width:.7em;text-align:center;color:#fff;top:50%;right:-.5em;background:-webkit-linear-gradient(left,transparent .1em,rgba(0,0,0,0.5) .1em);font-weight:bold;border-radius:2px;transform:translateY(-50%);z-index: 2;}
+		.page .left .toggleSide{position:absolute;height:5rem;line-height:5rem;width:.7rem;text-align:center;color:#fff;top:50%;right:-.5rem;background:-webkit-linear-gradient(left,transparent .1em,rgba(0,0,0,0.5) .1em);font-weight:bold;border-radius:2px;transform:translateY(-50%);z-index: 2;}
 		.page .left .toggleSide:hover{
 			cursor: pointer;
 			opacity: 0.5;
@@ -19,14 +19,14 @@
 		.page .left .toggleSide:before{content:"<"}
 		.page .main{overflow:hidden;}
 		.main .frame-wrap.loading{position:relative;}
-		.main .frame-wrap.loading:after{content:"LOADING...";position:absolute;background:rgba(0,0,0,0.4);width:100%;height:100%;top:0px;z-index:1;color:#136;font-weight:bold;font-family:fantasy;letter-spacing:.2em;text-align:center;line-height:10em;font-size:3em;}
+		.main .frame-wrap.loading:after{content:"LOADING...";position:absolute;background:rgba(0,0,0,0.4);width:100%;height:100%;top:0px;z-index:1;color:#136;font-weight:bold;font-family:fantasy;letter-spacing:.2rem;text-align:center;line-height:20rem;font-size:3rem;}
 		.left .nav{margin-top:3px;}
-		.left .nav-bar{color:#36a;font-family:fantasy;font-size:1.5em;line-height:2em;text-indent:1em;border-bottom:2px solid;overflow: hidden;white-space: nowrap;}
+		.left .nav-bar{color:#36a;font-family:fantasy;font-size:1.5rem;line-height:4rem;text-indent:1rem;border-bottom:2px solid;overflow: hidden;white-space: nowrap;}
 		.left .nav-wrap{border-right:2px solid #eee;}
-		.left .nav .nav-item{line-height:2.5em;position: relative;}
+		.left .nav .nav-item{position: relative;font-size: 0rem;}
 		.left .nav-item.active{background:#eee;}
-		.left .nav-item.active:after{position:absolute;content:"";width:.2em;height:100%;top:0;right:0;background:#36a;}
-		.nav .nav-item a{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-bottom:1px dashed;margin:0 1em;color:#36a;}
+		.left .nav-item.active:after{position:absolute;content:"";width:.2rem;height:100%;top:0;right:0;background:#36a;}
+		.nav .nav-item a{line-height:2.5rem;font-size:1rem;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-bottom:1px dashed;margin:0 1rem;color:#36a;}
 		.nav .nav-item a:before{content:"online";font-family:fantasy;}
 		.nav .nav-item:hover{background:-webkit-linear-gradient(left,transparent,#eee,#eee 80%,transparent);}
 		#iframe{height:100%;width:100%;border:none;}
@@ -40,19 +40,20 @@
             	<h3 class="nav-bar">coding online</h3>
                 <ul class="nav">
                     <li class="nav-item">
+                    	<a href="javascript:void(0);" data-href="https://www.zybuluo.com/mdeditor" title="markdown在线编辑" target="iframe">&nbsp;&nbsp;markdown</a>
+                    </li>
+                    <li class="nav-item">
                     	<a href="javascript:void(0);" data-href="http://jsfiddle.net/" title="html javascript css在线编辑" target="iframe">&nbsp;&nbsp;HJC</a>
                     </li>
                     <li class="nav-item">
                     	<a href="javascript:void(0);" data-href="http://www.es6fiddle.net/" title="ECMAScript 6在线编辑" target="iframe">&nbsp;&nbsp;ES6</a>
                     </li>
                     <li class="nav-item">
-                    	<a href="javascript:void(0);" data-href="https://www.zybuluo.com/mdeditor" title="markdown在线编辑" target="iframe">&nbsp;&nbsp;markdown</a>
-                    </li>
-                    <li class="nav-item">
                     	<a href="javascript:void(0);" data-href="http://joncom.be/experiments/markdown-editor/edit/">&nbsp;&nbsp;markdown</a>
                     </li>
                     <li class="nav-item">
-                    	<a href="javascript:void(0);" data-href="http://sassmeister.com/" title="scss在线编辑" target="iframe">&nbsp;&nbsp;scss</a>
+                    	<a href="http://sassmeister.com/" data-href="http://sassmeister.com/" title="scss在线编辑" target="_blank">&nbsp;&nbsp;scss</a>
+                    	<!-- <a href="javascript:void(0);" data-href="http://sassmeister.com/" title="scss在线编辑" target="iframe">&nbsp;&nbsp;scss</a> -->
                     </li>
                     <li class="nav-item">
                     	<a href="javascript:void(0);" data-href="http://less2css.org/" title="less在线编辑" target="iframe">&nbsp;&nbsp;less</a>
