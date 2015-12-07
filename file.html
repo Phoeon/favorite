@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <a href="http://javascript.ruanyifeng.com/bom/timer.html" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.infoq.com/cn/presentations/Node.js-business-practices-road" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.infoq.com/cn/presentations/node.js-as-Infrastructure" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.infoq.com/cn/presentations/node.js-for-snowball" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.infoq.com/cn/presentations/write-a-ruby-web-server-for-nodejs" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.infoq.com/cn/presentations/design-and-implementation-of-nodejs" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.infoq.com/cn/presentations/change-an-angle-to-see-front-end-and-back-end-dev-separation" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.infoq.com/cn/nodejs" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.ibm.com/developerworks/cn/linux/l-async/" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.infoq.com/cn/search.action?queryString=nodejs&page=1&searchOrder=&sst=PIszwhHk5YvHWyr5" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="https://www.google.com.hk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&safe=strict&q=nodejs+%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0" target="_black"></a>
+<a href="https://vimeo.com/96425312" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://shenxueliang.iteye.com/blog/1677194" target="_black">alsfjasdkjflaskdjfsdjlkajflksdjkl</a>
+<a href="http://www.es6fiddle.net/" target="_black">ES6 CODING ONLINE</a>
+</body>
+<script>
+	var Promise= (function(){
+	var Promise = function(asyncTask){
+		if(!(this instanceof Promise)){
+			return new Promise(asyncTask);
+		}
+		this.init(asyncTask);
+	}
+
+	Promise.prototype = {
+		init : function(at){
+				var cbQueue = [];
+				this.__unlock = function(){
+					this.cbQueue = cbQueue;
+				}
+				// this.__unlock.toString = (){return "function {[native code]}";}
+				at(this.emit.bind(this));
+		},
+		then : function(cb){
+			this.__unlock();
+			var cbQueue = this.cbQueue||[];
+			this.cbQueue = null ;
+			if(this.asyncDone===true) setTimeout(cb,0,this.result);
+			else cbQueue.push(cb);
+			return this;
+		},
+		emit : function(res){
+			this.asyncDone === true;
+			this.__unlock();
+			var cbQueue = this.cbQueue||[];
+			this.cbQueue = null;
+			while(cbQueue.length)this.result=cbQueue.shift()(this.result||res);
+		}
+	}
+
+	return Promise;
+})();
+
+</script>
+</html>
